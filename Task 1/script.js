@@ -59,7 +59,7 @@ let sale = sumMonth / 100 * 10;
 const salary = 250;
 alert('Ваша зарплата  - ' + (sale + salary) +'$');
 
-/* ================== Часть №2 =================== */
+/*  Часть №2  */
 
 //task1
 let yourName = prompt('Введите Ваше имя');
