@@ -99,7 +99,7 @@ switch(day) {
 };
 
 //task9
-for (i = 1; i <= 10; i++) {
+for (i = 2; i <= 9; i++) {
   for (j = i; j <= 10; j++) {
     alert(i * j);
   };
