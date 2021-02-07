@@ -135,18 +135,65 @@ function inSide (square, x, y) {
 };
 
 //Создать объект, описывающий автомобиль.
-let car = {
+let Mycar = {
   brand: 'volkswagen',
   model: 'golf',
   year: 1997,
   averageSpeed: 70,
 };
 // 1. вывод на экран всех данных об автомобиле.
-alert(Object.values(car));
+alert(Object.values(Mycar));
 
 //2. Функция для подсчета необходимого времени
 
 function time (car, distance) {
   let speed = car.averageSpeed;
-  
+  let result = 0;
+  let relax = 0;
+
+  result = Math.trunc(distance / speed);
+  result = Math.trunc(result) + (((result - (Math.trunc(result))) * 60) / 100)
+  for (let hour = 1; hour <= result; hour++) {
+  if (hour % 5 == 0) {
+    relax++;
+    result++;
+  }
 }
+  if(relax == 0) {
+    console.log(`Вы проедете эту дистанцию за ${result} часов, отдых Вам не понадобится`);
+  } else {
+    console.log(`Вы проедете эту дистанцию за ${result} часов, отдых Вам понадобится в количестве ${relax} часов`);
+  };
+}
+time(Mycar, 450);  
+
+
+  // Задача 3.
+  //Создать объект, хранящий в себе отдельно числитель и знаменатель дроби.
+
+  let fraction = {
+    fractionOne: {
+    numerator: 5,
+    denominator: 10,
+  },
+  fractionTwo: {
+    numerator: 3,
+    denominator: 6,
+  }
+};
+
+//1. Функция сложения 
+function addFraction (OneFract, TwoFract) {
+    let resultNumerators = fractionOne.numerator * fractionTwo.denominator + fractionTwo.numerator * fractionOne.denominator;
+    let resultDenominator = fractionOne.denominator + fractionTwo.denominator;  
+    console.log(`${resultNumerators} / ${resultDenominator}`);
+};
+addFraction(fractionOne(fraction), fractionTwo(fraction));
+  
+//2. Функция вычитания
+
+function subFraction (OneFract, TwoFract) {
+  let resultNumerators = fractionOne.numerator * fractionTwo.denominator + fractionTwo.numerator * fractionOne.denominator;
+  let resultDenominator = fractionOne.denominator * fractionTwo.denominator;
+}; console.log(`${resultNumerators} / ${resultDenominator}`);
+subFraction(fractionOne(fraction), fractionTwo(fraction));
