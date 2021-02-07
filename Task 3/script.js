@@ -101,12 +101,12 @@ switch(day) {
 //task9
 for (i = 2; i <= 9; i++) {
   for (j = i; j <= 10; j++) {
-    alert(i * j);
+    console.log(i * j);
   };
 };
 
 //task 10
-// let num = +prompt('Введите число от 0 до 100');
+let num = +prompt('Введите число от 0 до 100');
 
 //task11
 
