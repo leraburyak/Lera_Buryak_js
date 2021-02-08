@@ -183,7 +183,7 @@ time(Mycar, 450);
 };
 
 //1. Функция сложения 
-function addFraction (OneFract, TwoFract) {
+function addFraction (oneFract, twoFract) {
     let resultNumerators = fractionOne.numerator * fractionTwo.denominator + fractionTwo.numerator * fractionOne.denominator;
     let resultDenominator = fractionOne.denominator + fractionTwo.denominator;  
     console.log(`${resultNumerators} / ${resultDenominator}`);
@@ -192,8 +192,45 @@ addFraction(fractionOne(fraction), fractionTwo(fraction));
   
 //2. Функция вычитания
 
-function subFraction (OneFract, TwoFract) {
+function subFraction (oneFract, twoFract) {
   let resultNumerators = fractionOne.numerator * fractionTwo.denominator + fractionTwo.numerator * fractionOne.denominator;
   let resultDenominator = fractionOne.denominator * fractionTwo.denominator;
 }; console.log(`${resultNumerators} / ${resultDenominator}`);
 subFraction(fractionOne(fraction), fractionTwo(fraction));
+
+//3. Функция умножения 
+
+function multiFraction (oneFract, twoFract) {
+  let resultNumerators = fractionOne.numerator * fractionTwo.numerator;
+  let resultDenominator = fractionOne.denominator * fractionTwo.denominator;
+}; console.log(`${resultNumerators} / ${resultDenominator}`);
+multiFraction(fractionTwo(fraction), fractionTwo(fraction));
+
+//4. Функция деления
+
+function divisionFraction (oneFract, twoFract) {
+  let resultNumerators = fractionOne.numerator * fractionTwo.denominator;
+  let resultDenominator = fractionTwo.denominator * fractionOne.numerator;
+}; console.log(`${resultNumerators} / ${resultDenominator}`);
+divisionFraction (fractionTwo(fraction), fractionTwo(fraction));
+
+// 5. Функция сокращения 
+function reductionFraction (fractNum, fractDen) {
+  let reduc = 0;
+  if(fractNum > fractDen) {
+    min = fractDen; 
+  } else {
+    min = fractNum;
+  };
+  for(i = 1; i <= min; i++) {
+    if(fractNum % i == 0 && fractDen % 1 == 0) {
+      reduc = i;
+    };
+  };
+  let resultNumerators = fractionOne.numerator / reduc;
+  let resultDenominator = fractionOne.denominator / reduc;
+  }; console.log(`${resultNumerators}, ${resultDenominator}`)
+  reductionFraction(fraction.fractionOne.numerator,fraction.fractionOne.denominator);
+
+
+
