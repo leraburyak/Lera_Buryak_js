@@ -211,10 +211,75 @@ for (i = 0; i < num.length; i++) {
   }
 }
 console.log(maxNum, min, negSum);
+
+
 // 1 Создать массив из 10 случайных чисел:
-//   1. Программа выводит его на экран.
-// 2. Программа выводит только четные элементы.
-// 3. Программа возвращает сумму всех элементов массива.
-// 4. Программа возвращает его максимальный элемент.
+let arr = [];
+for(i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random() * 100));
+};
+console.log(arr);
+
+
+// 1. Программа выводит его на экран. 
+// 2. Программа выводит только четные элементы. 
+for(i = 0; i < arr.length; i++) {
+    if((arr[i] % 2) == 0) {
+        console.log(arr[i]);
+    }
+}
+// 3. Программа возвращает сумму всех элементов массива. 
+let arrSum = 0;
+for(i = 0; i < arr.length; i++) {
+arrSum += arr[i];
+} console.log(arrSum);
+// 4. Программа возвращает его максимальный элемент. 
+let numMax = 0;
+for(i = 0; i < arr.length; i++) {
+    if(arr[i] > numMax) {
+        numMax = arr[i];
+    }
+}console.log(numMax);
 // 5. Программа добавляет новый элемент в массив по указанному индексу.
+let insNum = arr.splice(2, 0, '22');
+console.log(arr);
 // 6. Программа удаляет элемент из массива по указанному индексу.
+let delNum = arr.splice(3, 1);
+console.log(delNum);
+console.log(arr);
+
+//1. Создать массив "Список покупок"
+let shopList = [{
+    title: 'Сыр',
+    quantity: 1,
+    buy: 'Куплен'
+  },
+  {
+    title: 'Шоколад',
+    quantity: 2,
+    buy: 'Не куплен'
+  },
+  {
+    title: 'Молоко',
+    quantity: 2,
+    buy: 'Куплен'
+  },
+  {
+    title: 'Хлеб',
+    quantity: 1,
+    buy: 'Не куплен'
+  },
+];
+let newList = '';
+for (i = 0; i < shopList.length; i++) {
+  if (shopList[i].buy == 'Куплен') {
+    newList += shopList[i].title + ' ';
+  }
+}
+for (i = 0; i < shopList.length; i++) {
+  if (shopList[i].buy !== 'Куплен') {
+    newList += shopList[i].title + ' ';
+  }
+}
+
+console.log(newList);
