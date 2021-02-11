@@ -215,22 +215,49 @@ function divisionFraction (oneFract, twoFract) {
 divisionFraction (fractionTwo(fraction), fractionTwo(fraction));
 
 // 5. Функция сокращения 
-function reductionFraction (fractNum, fractDen) {
-  let reduc = 0;
-  if(fractNum > fractDen) {
-    min = fractDen; 
-  } else {
-    min = fractNum;
+// function reductionFraction (fractNum, fractDen) {
+//   let reduc = 0;
+//   if(fractNum > fractDen) {
+//     min = fractDen; 
+//   } else {
+//     min = fractNum;
+//   };
+//   for(i = 1; i <= min; i++) {
+//     if(fractNum % i == 0 && fractDen % 1 == 0) {
+//       reduc = i;
+//     };
+//   };
+//   let resultNumerators = fractionOne.numerator / reduc;
+//   let resultDenominator = fractionOne.denominator / reduc;
+//   }; console.log(`${resultNumerators}, ${resultDenominator}`)
+//   reductionFraction(fraction.fractionOne.numerator,fraction.fractionOne.denominator);
+
+   function reductionFraction (number) {
+     if(number.numerator % number.denominator === 0) {
+       console.log(number.numerator / number.denominator);
+     } else if (number.numerator > number.denominator || number.numerator < number.denominator) {
+       let reduc = Math.trunc(number.numerator / number.denominator);
+       let reducTwo = number.numerator % number.denominator;
+       console.log(`Целая часть равна: ${reduc}, дробная часть равна: ${reducTwo} / ${number.denominator}`)
+     } else if (number.numerator < number.denominator) {
+       for (i = number.numerator; i >= 0; i--) {
+         if(number.numerator % i == 0 && number.denominator % i == 0);
+         console.log(`Дробная часть равна: ${number.numerator / i} / ${number.denominator / i}`);
+         break;
+       };
+     }
+   }
+   reductionFraction(fraction);
+
+
+
+  let time = {
+    hours: 12,
+    min: 30,
+    sec: 25,
   };
-  for(i = 1; i <= min; i++) {
-    if(fractNum % i == 0 && fractDen % 1 == 0) {
-      reduc = i;
-    };
-  };
-  let resultNumerators = fractionOne.numerator / reduc;
-  let resultDenominator = fractionOne.denominator / reduc;
-  }; console.log(`${resultNumerators}, ${resultDenominator}`)
-  reductionFraction(fraction.fractionOne.numerator,fraction.fractionOne.denominator);
 
+  // 1. вывод на экран всех данных .
+  alert(Object.values(time));
 
-
+  //2. 
