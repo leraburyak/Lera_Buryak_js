@@ -18,14 +18,6 @@ function makeCounterMinus() {
 button_plus.addEventListener("click", makeCounterPlus);
 button_minus.addEventListener("click", makeCounterMinus);
 
-  // let buttonPlus = document.querySelector('.button_plus').innerHTML = buttonClick;
-  // let buttonMinus = document.querySelector('.button_minus').innerHTML = buttonClick;
-  // if(button_plus.onclick = buttonPlus) {
-  //   buttonClick += 1;
-  //   console.log(buttonClick);
-  // } else if (button_minus.onclick = buttonMinus) {
-  //   buttonClick -= 1;
-  // }
 
 //  
 //  let newList = function makeTodo(value) {
