@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <button type = "button" onclick = "increaseCounter(this)" class="button">Вы нажали кнопку:</button>
+
+     <div class="taskTwo">
+    <button type = "text" onclick = "makeCounterPlus()" class = "button_plus">0</button>
+    <button type = "text" onclick = "makeCounterMinus()"class = "button_minus">0</button>
+    </div>
+
+    <div class="todo">
+      <input type="text" placeholder="Добавить список" id="todo_input">
+      <div id="button">
+        <button class="save">Добавить задание</button>
+      </div>
+      <div class="makeTodo"></div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

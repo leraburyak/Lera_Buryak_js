@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 100px;
+  height: 45px;
+}
+
+.button_plus,
+.button_minus {
+  margin-top: 15px;
+}
+
+.todo {
+  margin-top: 25px;
+}
