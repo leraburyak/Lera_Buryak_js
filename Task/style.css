@@ -1,0 +1,6 @@
+.bookList li{
+  cursor: pointer;
+}
+.selected {
+  color: orange;
+}
