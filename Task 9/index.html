@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "range" id="volume" name = "volume" min="0" max="15" value="0">
+    <button id="button">Add</button>
+    
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Html')">Html</button>
+        <button class="tablinks" onclick="openCity(event, 'Css')">Css</button>
+        <button class="tablinks" onclick="openCity(event, 'JS')">JS</button>
+      </div>
+      
+      <div id="html" class="tabcontent">
+        <h3>Html</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem et aliquam praesentium repellendus beatae, quas expedita. Natus magni eius dolor, excepturi aperiam et optio assumenda provident atque cumque quisquam porro?</p>
+      </div>
+      
+      <div id="css" class="tabcontent">
+        <h3>css</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente vero nihil hic. Fuga doloribus culpa vero adipisci distinctio repellat iusto, assumenda cum earum maxime minus officiis provident libero animi.</p>
+      </div>
+      
+      <div id="js" class="tabcontent">
+        <h3>JS</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio voluptatibus sit minima quis voluptas! Dignissimos voluptate eveniet totam amet fugiat expedita mollitia in quia, deserunt dicta. Veritatis facilis facere ab?</p>
+      </div>
+    <script>
+        let button = document.querySelector("#button");
+    let result = 0;
+     function addButton() {
+    result += 5;
+    document.querySelector("#volume").value= result;
+}
+    button.addEventListener('click', addButton);
+
+
+    function openCity() {
+        document.querySelector('.tablinks').forEach(element => {
+        if(element.innerHTML = 'HTML')
+        });
+    }
+
+
+
+    </script>
+</body>
+</html>

@@ -4,3 +4,8 @@
 .selected {
   color: orange;
 }
+.tasksex {
+  padding: 30px;
+  border: 1px solid red;
+  width: 140px;
+}
