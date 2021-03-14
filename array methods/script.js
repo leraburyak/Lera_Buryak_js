@@ -123,3 +123,5 @@ console.log(newArrFindIndex); //3
   let newArrSort = (firstEl, secondEl) => firstEl - secondEl;
   arr.sort(newArrSort);
   console.log(arr); //[-1,1,2,5,7,7]
+
+  
