@@ -32,7 +32,25 @@ let sumNullEl = arr.reduce(function (acc, currentValue, index) {
 console.log(sumNullEl);
 
 //Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
-
-
+let num  = 1; //счетчик
+let numReduce = arr.reduce(function(acc, currentValue) {
+if(acc > 10) {
+  console.log(num);
+  return;
+} else {
+  num++;
+  return acc + currentValue;
+}
+},);
 
 //Дан массив с числами. Узнайте сколько элементов с конца массива надо сложить, чтобы в сумме получилось больше 10-ти.
+let num  = 1; //счетчик
+let numReduce = arr.reduceRight(function(acc, currentValue) {
+if(acc > 10) {
+  console.log(num);
+  return;
+} else {
+  num++;
+  return acc + currentValue;
+}
+},);
